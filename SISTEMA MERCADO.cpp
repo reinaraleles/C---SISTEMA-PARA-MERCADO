@@ -1,17 +1,17 @@
 /* Gabriel da Silva Oliveira
   
-  O Sistema é baseado em um supermercado, contendo funções essenciais exemplo:
+  O Sistema Ã© baseado em um supermercado, contendo funÃ§Ãµes essenciais exemplo:
   
-  - Controle de Estoque (cadastro e consulta de produtos, alteração de produtos, etc)
-  Obs.: Falta a opção de excluir um produto do estoque
+  - Controle de Estoque (cadastro e consulta de produtos, alteraÃ§Ã£o de produtos, etc)
+  Obs.: Falta a opÃ§Ã£o de excluir um produto do estoque
   
   - Vendas
   
-  - Informações de caixa (vendas, despesas, etc)
-  Obs.: Falta implementar a função de informações de caixa
+  - InformaÃ§Ãµes de caixa (vendas, despesas, etc)
+  Obs.: Falta implementar a funÃ§Ã£o de informaÃ§Ãµes de caixa
   
   
-  - PRETENDO IMPLEMENTAR MAIS FUNÇÕES AO LONGO DO TEMPO, TORNANDO O SISTEMA AINDA MAIS COMPLETO. 
+  - PRETENDO IMPLEMENTAR MAIS FUNÃ‡Ã•ES AO LONGO DO TEMPO, TORNANDO O SISTEMA AINDA MAIS COMPLETO. 
   */
 
 #include <stdio.h>
@@ -38,6 +38,18 @@ typedef struct{
 CaixaMercado caixa[TAM];
 
 void MenuPrincipal();
+void VendasConcluidas(CaixaMercado *caixa, Produto *produto);
+void InfoCaixa(CaixaMercado *caixa, Produto *produto);
+void AlterarProduto(Produto *produto);
+void VerEstoque(Produto *produto);
+void CadastrarProduto(Produto *produto);
+void OpcoesDeEstoque(Produto *produto);
+void MenuPrincipal();
+
+int main (){
+	
+	MenuPrincipal();
+}
 void VendasConcluidas(CaixaMercado *caixa, Produto *produto){
 	int i, voltarmenu;
 	
@@ -185,7 +197,7 @@ void CadastrarProduto(Produto *produto){
 					
 					printf("QUANTIDADE DO PRODUTO: \n");
 						scanf("%d", &produto[i].qtdestoque);
-					printar++; //variavel para controlar o FOR da listagem dos produtos, para não aparecer merda quando imprimir alista		
+					printar++; //variavel para controlar o FOR da listagem dos produtos, para nÃ£o aparecer merda quando imprimir alista		
 					ncadastrados++;
 				printf("\n =================================== \n");
 				printf("    CADASTRO EFETUADO COM SUCESSO! \n");
@@ -317,9 +329,4 @@ void MenuPrincipal(){
 		}
 		
 	}
-}
-
-int main (){
-	
-	MenuPrincipal();
 }
