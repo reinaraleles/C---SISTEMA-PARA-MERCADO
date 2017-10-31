@@ -1,26 +1,9 @@
-/* Gabriel da Silva Oliveira
-  
-  O Sistema é baseado em um supermercado, contendo funções essenciais exemplo:
-  
-  - Controle de Estoque (cadastro e consulta de produtos, alteração de produtos, etc)
-  Obs.: Falta a opção de excluir um produto do estoque
-  
-  - Vendas
-  
-  - Informações de caixa (vendas, despesas, etc)
-  Obs.: Falta implementar a função de informações de caixa
-  
-  
-  - PRETENDO IMPLEMENTAR MAIS FUNÇÕES AO LONGO DO TEMPO, TORNANDO O SISTEMA AINDA MAIS COMPLETO. 
-  */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 
 #define TAM 3
-
 
 int respcadastro; // quando o produto nao estiver cadastrado, responda 1 para cadastrar ou 0 para voltar par o menu
 int ncadastrados = 0 /* controlar o numero de produtos cadastrados */, printar=0 /*controlar listagemdo estoque */ ,vendaconcluida=0 /* controlar listagem das vendas concluidas */;
